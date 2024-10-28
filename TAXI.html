@@ -24,15 +24,13 @@
             gap: 20px;
             margin-top: 20px;
         }
-        .image-container a {
-            display: inline-block;
-        }
         .image-container img {
-            width: 250px; /* Ancho fijo */
-            height: 250px; /* Alto fijo */
-            object-fit: cover; /* Ajusta la imagen para cubrir el espacio */
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
             border-radius: 8px;
             transition: transform 0.3s;
+            cursor: pointer;
         }
         .image-container img:hover {
             transform: scale(1.1);
@@ -42,15 +40,9 @@
 <body>
     <h1>TAXI</h1>
     <div class="image-container">
-        <a href="TAXI/movil_expres.html" target="_blank">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rC1_iBEgiyMwbpc2V80Wj26yGDSskkf-Eg&s" alt="Taxi 1">
-        </a>
-        <a href="TAXI/movil_san_pedro.html" target="_blank">
-            <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/299729988_507632121363467_8306480656725469853_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ZjZSS-wcRoUQ7kNvgFBlP56&_nc_zt=23&_nc_ht=scontent.fvvi1-1.fna&_nc_gid=ASEnRLfIr8W0Gzp_CkoEvId&oh=00_AYDPCqPCWUiNdoMrDHN9oyZc-YwmXH8Ye-X7Hy-QieSCdg&oe=67259951">
-        </a>
-        <a href="TAXI/movil_premier.html" target="_blank">
-            <img src="https://i.ibb.co/10BYqWh/Screenshot-20241028-145937.jpg" alt="Taxi 3">
-        </a>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rC1_iBEgiyMwbpc2V80Wj26yGDSskkf-Eg&s" alt="Taxi 1" onclick="window.location.href = 'TAXI/movil_expres.html';">
+        <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/299729988_507632121363467_8306480656725469853_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ZjZSS-wcRoUQ7kNvgFBlP56&_nc_zt=23&_nc_ht=scontent.fvvi1-1.fna&_nc_gid=ASEnRLfIr8W0Gzp_CkoEvId&oh=00_AYDPCqPCWUiNdoMrDHN9oyZc-YwmXH8Ye-X7Hy-QieSCdg&oe=67259951" alt="Taxi 2" onclick="window.location.href = 'TAXI/movil_san_pedro.html';">
+        <img src="https://i.ibb.co/10BYqWh/Screenshot-20241028-145937.jpg" alt="Taxi 3" onclick="window.location.href = 'TAXI/movil_premier.html';">
     </div>
 </body>
 </html>
