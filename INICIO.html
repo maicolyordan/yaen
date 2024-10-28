@@ -18,7 +18,8 @@
         }
         .button-container {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column; /* Cambiado a columna para apilar los botones */
+            align-items: center; /* Centrado horizontalmente */
             margin: 20px 0;
         }
         .button {
@@ -27,9 +28,11 @@
             color: white;
             border: none;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 20px;
             cursor: pointer;
             transition: background-color 0.3s;
+            width: 300px; /* Ancho fijo para los botones */
+            margin: 10px 0; /* Espacio entre botones */
         }
         .button:hover {
             background-color: #009ACD;
@@ -42,7 +45,7 @@
 
     <div class="button-container">
         <button class="button" onclick="window.location.href = 'TAXI.html';">🚖 TAXI 🚕</button>
-        <button class="button" onclick="window.location.href = 'COMIDAS.html';">🍔 COMIDAS 🍕</button>
+        <button class="button" onclick="window.location.href = 'COMIDAS.html';">🍔 COMIDA🍔  </button>
     </div>
 </body>
 </html>
