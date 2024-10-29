@@ -1,0 +1,48 @@
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMIDAS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #ffffff;
+            margin-top: 20px;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>COMIDAS</h1>
+    <div class="image-container">
+        <img src="https://imgfz.com/i/vEUBnYA.jpeg" alt="Taxi 1" onclick="window.location.href = 'COMIDAS/pizza_tradicional.html';">
+        <img src="https://imgfz.com/i/SB4zjte.jpeg" alt="Taxi 2" onclick="window.location.href = 'COMIDAS/comida_criolla.html';">
+
+    </div>
+</body>
+</html>
