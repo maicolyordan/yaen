@@ -1,0 +1,66 @@
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU CHAPACO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Fondo negro */
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #ffffff; /* Título en color verde */
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 300px; /* Ancho fijo */
+            height: 300px; /* Alto fijo */
+            object-fit: cover; /* Ajusta la imagen al tamaño especificado */
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .text-bar {
+            background-color: #fff; /* Barra blanca */
+            color: #000; /* Texto negro */
+            padding: 20px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .whatsapp-button {
+            background-color: #25D366; /* Color verde de WhatsApp */
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .whatsapp-button:hover {
+            background-color: #1ebe5d; /* Cambia de color al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <h1>MENU CHAPACO</h1>
+    <div class="image-container">
+        <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/461599693_8412251522198961_4407102564298723269_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=rOoP8N5v8CgQ7kNvgGjiAMB&_nc_zt=23&_nc_ht=scontent.fvvi1-1.fna&_nc_gid=AuARvjwSRFhzaqB9mqkDcoo&oh=00_AYDHILnPjS_VPYqAQQgSGeX4vWWOuz1D5Q_URbpdw2fvfQ&oe=672EDFC9">
+    </div>
+    <button class="whatsapp-button" onclick="window.location.href = 'https://wa.me/+59173488227';">
+        WhatsApp
+    </button>
+    <div class="text-bar">
+       
+ven y degusta nuestro plato delicioso plat y no puede faltar el refresquito de pelon te esperamos
+calle : indepedencia entre avenida san martin casi cornelio rios
+
+    </div>
+
+</body>
+</html>
