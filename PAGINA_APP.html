@@ -1,1 +1,53 @@
-.
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirección a WhatsApp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000; /* Fondo negro */
+            overflow: hidden;
+            position: relative;
+        }
+        img {
+            width: 90%; /* Ajuste del tamaño de la imagen al 70% del ancho de la pantalla */
+            height: auto;
+            max-height: 90%; /* Limita la altura máxima al 70% de la pantalla */
+            object-fit: contain;
+        }
+        .loading-text {
+            position: absolute;
+            bottom: 20px;
+            color: white;
+            font-size: 1.5em;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Imagen desde un enlace -->
+    <img src="https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/PESTA%C3%91A.png" alt="Imagen de fondo">
+    <!-- Texto de carga -->
+    <div class="loading-text">Cargando...</div>
+
+    <script>
+        // Redirección a WhatsApp después de 3 segundos
+        setTimeout(function() {
+            window.location.href = "https://wa.me/60288439";
+        }, 3000); // 3000 ms = 3 segundos
+    </script>
+</body>
+</html>
