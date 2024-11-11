@@ -1,0 +1,133 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YAEN</title>
+<meta name="google-site-verification" content="MmnNXyS4e3jmSn1r7lMTgx7C2G7imNblucMcznxnpA4" />
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+    transition: background-image 1s ease-in-out;
+}
+img {
+    margin: 20px 0;
+    width: 300px;
+}
+.gallery-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.gallery {
+    display: flex;
+    transition: transform 1s ease;
+}
+.gallery img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.nav-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+button.custom-button {
+    background-color: #0379f9; /* Light blue color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px; /* Increased button width */
+    height: 50px;
+    margin-bottom: 10px;
+}
+</style>
+<script>
+let currentBackground = 0;
+const backgrounds = [
+    'url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/71/e9/3e/de-dia-es-digno-de-admirar.jpg?w=1200&h=-1&s=1")',
+    'url("https://upload.wikimedia.org/wikipedia/commons/5/5b/P7260383_Yacuiba_estaci%C3%B3n.JPG")',
+    'url("https://elpais.bo/img/images_640/contents/2019/12/21/67fbdc3e-e014-4f8f-955f-f6735fe3a755.jpeg")'
+];
+
+function changeBackground() {
+    currentBackground = (currentBackground + 1) % backgrounds.length;
+    document.querySelector('.background').style.backgroundImage = backgrounds[currentBackground];
+}
+
+setInterval(changeBackground, 10000);
+
+let galleryPosition = 0;
+
+function moveGallery() {
+    galleryPosition = (galleryPosition + 1) % 3;
+    document.querySelector('.gallery').style.transform = `translateX(-${galleryPosition * 320}px)`;
+}
+
+function moveLeft() {
+    galleryPosition = (galleryPosition - 1 + 3) % 3;
+    document.querySelector('.gallery').style.transform = `translateX(-${galleryPosition * 320}px)`;
+}
+
+function moveRight() {
+    galleryPosition = (galleryPosition + 1) % 3;
+    document.querySelector('.gallery').style.transform = `translateX(-${galleryPosition * 320}px)`;
+}
+
+setInterval(moveGallery, 4000);
+
+function redirectToPage(url) {
+    window.location.href = url;
+}
+</script>
+</head>
+<body>
+<div class="background" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/71/e9/3e/de-dia-es-digno-de-admirar.jpg?w=1200&h=-1&s=1');"></div>
+
+
+
+
+<!-- Vertical buttons below the gallery -->
+<div class="buttons-container">
+    <button class="custom-button" onclick="redirectToPage('https://maicolyordan.github.io/yaen/TAXI.html')">FARMACIAS</button>
+  
+</div>
+
+</body>
+</html>
