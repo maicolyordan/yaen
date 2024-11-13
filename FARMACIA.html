@@ -1,1 +1,49 @@
- .
+ 
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARMACIAS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #ffffff;
+            margin-top: 20px;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>FARMACIAS</h1>
+    <div class="image-container">
+        <img src="https://i.postimg.cc/rF0hQGNG/Screenshot-20241113-073733.jpg" alt="Taxi 1" onclick="window.location.href = 'FARMACIA/biofar.html';">
+        <img src="https://i.postimg.cc/PqsYTYZj/20200907-095010-scaled.jpg" alt="Taxi 2" onclick="window.location.href = 'FARMACIA/farmacorp.html';">
+        <img src="https://i.postimg.cc/W41F283x/Screenshot-20241113-082548.jpg" alt="Taxi 3" onclick="window.location.href = 'FARMACIA/gutierrez.html';">
+    </div>
+</body>
+</html>
