@@ -6,76 +6,131 @@
 <title>YAEN</title>
 <meta name="google-site-verification" content="MmnNXyS4e3jmSn1r7lMTgx7C2G7imNblucMcznxnpA4" />
 <style>
+/* Configuración general */
 body {
-font-family: Arial, sans-serif;
-text-align: center;
-color: white;
+font-family: 'Arial', sans-serif;
 margin: 0;
 padding: 0;
-overflow-x: hidden;
+overflow: hidden;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+color: white;
+position: relative;
 }
+
 .background {
 position: fixed;
 top: 0;
 left: 0;
 width: 100%;
 height: 100%;
+z-index: -1;
 background-size: cover;
 background-position: center;
-background-attachment: fixed;
-z-index: -1;
-transition: background-image 1s ease-in-out;
+transition: background-image 1.5s ease-in-out;
 }
-img {
-margin: 20px 0;
-width: 300px;
-}
-.gallery-container {
-width: 100%;
-overflow: hidden;
-position: relative;
-}
-.gallery {
-display: flex;
-transition: transform 1s ease;
-}
-.gallery img {
-width: 300px;
-height: auto;
-margin-right: 20px;
-cursor: pointer;
-}
-.nav-buttons {
-position: absolute;
-top: 50%;
-width: 100%;
-display: flex;
-justify-content: space-between;
-transform: translateY(-50%);
-}
-.nav-buttons button {
-background-color: rgba(0, 0, 0, 0.5);
+
+/* Encabezado */
+h1 {
+font-size: 3rem;
+text-align: center;
+margin-top: 5vh;
 color: white;
-border: none;
-padding: 10px;
-cursor: pointer;
+text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+animation: fadeIn 2s;
 }
+
+/* Número de versión */
+.version {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 0.9rem;
+font-weight: bold;
+background: rgba(0, 0, 0, 0.6);
+padding: 5px 10px;
+border-radius: 5px;
+color: white;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Contenedor de botones */
 .buttons-container {
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-top: 20px;
+gap: 1.5rem;
+margin-bottom: auto;
+}
+
+/* Estilos de botones */
+button.custom-button {
+background: rgba(6,255,119,0);
+color: white;
+border: 2px solid #ffffff;
+padding: 1rem 2rem;
+font-size: 1.2rem;
+font-weight: bold;
+border-radius: 50px;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+cursor: pointer;
+width: 80%;
+max-width: 350px;
+transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.custom-button:hover {
+transform: translateY(-5px);
+background: rgba(255, 255, 255, 0.9);
+color: black;
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo del anuncio */
+.ad-container {
+position: fixed;
+bottom: 0;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+text-align: center;
+padding: 10px 0;
+}
+
+.ad-container a img {
+width: 90%;
+max-width: 600px;
+border-radius: 10px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ad-container a img:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(-10px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* Adaptabilidad */
+@media (max-width: 768px) {
+h1 {
+font-size: 2.5rem;
 }
 button.custom-button {
-background-color: #68ffa58f; /* Light blue color */
-color: white;
-border: none;
-padding: 10px 20px;
-font-size: 16px;
-cursor: pointer;
-width: 200px; /* Increased button width */
-height: 50px;
-margin-bottom: 10px;
+font-size: 1rem;
+padding: 0.8rem 1.5rem;
+}
 }
 </style>
 <script>
@@ -91,26 +146,7 @@ currentBackground = (currentBackground + 1) % backgrounds.length;
 document.querySelector('.background').style.backgroundImage = backgrounds[currentBackground];
 }
 
-setInterval(changeBackground, 2000);
-
-let galleryPosition = 0;
-
-function moveGallery() {
-galleryPosition = (galleryPosition + 1) % 3;
-document.querySelector('.gallery').style.transform = `translateX(-${galleryPosition * 320}px)`;
-}
-
-function moveLeft() {
-galleryPosition = (galleryPosition - 1 + 3) % 3;
-document.querySelector('.gallery').style.transform = `translateX(-${galleryPosition * 320}px)`;
-}
-
-function moveRight() {
-galleryPosition = (galleryPosition + 1) % 3;
-document.querySelector('.gallery').style.transform = `translateX(-${galleryPosition * 320}px)`;
-}
-
-setInterval(moveGallery, 7000);
+setInterval(changeBackground, 4000);
 
 function redirectToPage(url) {
 window.location.href = url;
@@ -118,40 +154,31 @@ window.location.href = url;
 </script>
 </head>
 <body>
+<!-- Fondo dinámico -->
 <div class="background" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/71/e9/3e/de-dia-es-digno-de-admirar.jpg?w=1200&h=-1&s=1');"></div>
 
+<!-- Número de versión -->
+<div class="version">Versión 0.0.1</div>
+
+<!-- Encabezado -->
 <h1>YAEN</h1>
+
+<div style="height: 125px;"></div>
+
+<!-- Botones -->
 <div class="buttons-container">
 <button class="custom-button" onclick="redirectToPage('https://maicolyordan.github.io/yaen/TAXI.html')">🚖 TAXI 🚕</button>
-<button class="custom-button" onclick="redirectToPage('https://maicolyordan.github.io/yaen/COMIDAS.html')">🍔 COMIDA 🍔 </button>
-<button class="custom-button" onclick="redirectToPage('https://maicolyordan.github.io/yaen/DELIVERY.html')">🛵DELIVERY🏍</button>
-<button class="custom-button" onclick="redirectToPage('https://maicolyordan.github.io/yaen/FARMACIA.html')">FARMACIA</button>
+<button class="custom-button" onclick="redirectToPage('https://maicolyordan.github.io/yaen/COMIDAS.html')">🍔 COMIDA 🍔</button>
+<button class="custom-button" onclick="redirectToPage('https://maicolyordan.github.io/yaen/DELIVERY.html')">🛵 DELIVERY 🏍</button>
+<button class="custom-button" onclick="redirectToPage('https://maicolyordan.github.io/yaen/FARMACIA.html')">💊 FARMACIA</button>
+<button class="custom-button" onclick="redirectToPage('https://maicolyordan.github.io/yaen/VER_MAS.html')">🔍 VER MÁS</button>
+</div>
 
-<button class="custom-button" onclick="redirectToPage('https://maicolyordan.github.io/yaen/VER_MAS.html')">VER MAS</button>
-
-<h1></h1>
-
-<div class="gallery-container">
-<div class="gallery">
-<a href="https://maicolyordan.github.io/yaen/PAGINA_APP.html" target="_self">
-<img src="https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/PESTA%C3%91A.png" alt="Imagen 1">
-</a>
-<a href="https://maicolyordan.github.io/yaen/PAGINA_APP.html" target="_self">
-<img src="https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/PESTAÑA2.png" alt="Imagen 2">
-</a>
-<a href="https://maicolyordan.github.io/yaen/PAGINA_APP.html" target="_self">
-<img src="https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/PESTA%C3%91A3.png" alt="Imagen 3">
+<!-- Anuncio -->
+<div class="ad-container">
+<a href="https://maicolyordan.github.io/yaen/PAGINA_APP.html" target="_blank">
+<img src="https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/PESTA%C3%91A.png" alt="Anuncio">
 </a>
 </div>
-<div class="nav-buttons">
-<button onclick="moveLeft()">&#10094;</button>
-<button onclick="moveRight()">&#10095;</button>
-</div>
-</div>
-
-<!-- Vertical buttons below the gallery -->
-
-</div>
-
 </body>
 </html>
