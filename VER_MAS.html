@@ -136,9 +136,9 @@ padding: 0.8rem 1.5rem;
 <script>
 let currentBackground = 0;
 const backgrounds = [
-'url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/71/e9/3e/de-dia-es-digno-de-admirar.jpg?w=1200&h=-1&s=1")',
-'url("https://upload.wikimedia.org/wikipedia/commons/5/5b/P7260383_Yacuiba_estaci%C3%B3n.JPG")',
-'url("https://elpais.bo/img/images_640/contents/2019/12/21/67fbdc3e-e014-4f8f-955f-f6735fe3a755.jpeg")'
+'url("https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/FONDO/IMAGEN1.png")',
+'url("https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/FONDO/IMAGEN2.png")',
+'url("https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/FONDO/IMAGEN3.png")'
 ];
 
 function changeBackground() {
@@ -146,7 +146,7 @@ currentBackground = (currentBackground + 1) % backgrounds.length;
 document.querySelector('.background').style.backgroundImage = backgrounds[currentBackground];
 }
 
-setInterval(changeBackground, 4000);
+setInterval(changeBackground, 2000);
 
 function redirectToPage(url) {
 window.location.href = url;
@@ -155,7 +155,7 @@ window.location.href = url;
 </head>
 <body>
 <!-- Fondo dinámico -->
-<div class="background" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/71/e9/3e/de-dia-es-digno-de-admirar.jpg?w=1200&h=-1&s=1');"></div>
+<div class="background" style="background-image: url('https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/FONDO/IMAGEN1.png');"></div>
 
 
 
