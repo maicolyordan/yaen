@@ -8,148 +8,149 @@
 <style>
 /* Configuración general */
 body {
-font-family: 'Arial', sans-serif;
-margin: 0;
-padding: 0;
-overflow: hidden;
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-color: white;
-position: relative;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  position: relative;
 }
 
 .background {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: -1;
-background-size: cover;
-background-position: center;
-transition: background-image 1.5s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1.5s ease-in-out;
 }
 
 /* Encabezado */
 h1 {
-font-size: 3rem;
-text-align: center;
-margin-top: 5vh;
-color: white;
-text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
-animation: fadeIn 2s;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 5vh;
+  color: white;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 2s;
 }
 
 /* Número de versión */
 .version {
-position: absolute;
-top: 10px;
-right: 10px;
-font-size: 0.9rem;
-font-weight: bold;
-background: rgba(0, 0, 0, 0.6);
-padding: 5px 10px;
-border-radius: 5px;
-color: white;
-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 /* Contenedor de botones */
 .buttons-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 1.5rem;
-margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: auto;
 }
 
 /* Estilos de botones */
 button.custom-button {
-background: rgba(6,255,119,0);
-color: white;
-border: 2px solid #ffffff;
-padding: 1rem 2rem;
-font-size: 1.2rem;
-font-weight: bold;
-border-radius: 50px;
-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-cursor: pointer;
-width: 80%;
-max-width: 350px;
-transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(6, 255, 119, 0);
+  color: white;
+  border: 2px solid #ffffff;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  width: 350px; /* Tamaño fijo para todos los botones */
+  max-width: 350px;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 button.custom-button:hover {
-transform: translateY(-5px);
-background: rgba(255, 255, 255, 0.9);
-color: black;
-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo del anuncio */
 .ad-container {
-position: fixed;
-bottom: 0;
-width: 100%;
-background-color: rgba(0, 0, 0, 0.8);
-text-align: center;
-padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 10px 0;
 }
 
 .ad-container a img {
-width: 90%;
-max-width: 600px;
-border-radius: 10px;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ad-container a img:hover {
-transform: scale(1.05);
-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
 /* Animación de entrada */
 @keyframes fadeIn {
-from {
-opacity: 0;
-transform: translateY(-10px);
-}
-to {
-opacity: 1;
-transform: translateY(0);
-}
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Adaptabilidad */
 @media (max-width: 768px) {
-h1 {
-font-size: 2.5rem;
-}
-button.custom-button {
-font-size: 1rem;
-padding: 0.8rem 1.5rem;
-}
+  h1 {
+    font-size: 2.5rem;
+  }
+  button.custom-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    width: 90%; /* Botones adaptables en dispositivos pequeños */
+  }
 }
 </style>
 <script>
 let currentBackground = 0;
 const backgrounds = [
-'url("https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/FONDO/IMAGEN1.png")',
-'url("https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/FONDO/IMAGEN2.png")',
-'url("https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/FONDO/IMAGEN3.png")'
+  'url("https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/FONDO/IMAGEN1.png")',
+  'url("https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/FONDO/IMAGEN2.png")',
+  'url("https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/FONDO/IMAGEN3.png")'
 ];
 
 function changeBackground() {
-currentBackground = (currentBackground + 1) % backgrounds.length;
-document.querySelector('.background').style.backgroundImage = backgrounds[currentBackground];
+  currentBackground = (currentBackground + 1) % backgrounds.length;
+  document.querySelector('.background').style.backgroundImage = backgrounds[currentBackground];
 }
 
 setInterval(changeBackground, 2000);
 
 function redirectToPage(url) {
-window.location.href = url;
+  window.location.href = url;
 }
 </script>
 </head>
@@ -157,23 +158,13 @@ window.location.href = url;
 <!-- Fondo dinámico -->
 <div class="background" style="background-image: url('https://raw.githubusercontent.com/maicolyordan/yaen/refs/heads/html/FONDO/IMAGEN1.png');"></div>
 
-
-
 <!-- Encabezado -->
 <h1></h1>
 
-
-
 <!-- Botones -->
 <div class="buttons-container">
-<button class="custom-button" onclick="redirectToPage('STREAMING.html')">🎬SERVICIO STREAMING</button>
-
-<!-- Botones -->
-<div class="buttons-container">
-<button class="custom-button" onclick="redirectToPage('https://maicolyordan.github.io/Evoluci-nTV-/canales_de_bolivia.html')">📺 CANALES DE BOLIVIA</button>
-
-
-
+  <button class="custom-button" onclick="redirectToPage('STREAMING.html')">🎬 SERVICIO STREAMING</button>
+  <button class="custom-button" onclick="redirectToPage('https://maicolyordan.github.io/Evoluci-nTV-/canales_de_bolivia.html')">CANALES DE BOLIVIA</button>
 </div>
 </body>
 </html>
